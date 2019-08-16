@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href="/">All</a><a href="/roasts/all">roasts</a><a href="/boasts/all">boasts</a><a href="/likes/all">Votes</a>
+<ul>
+    {% for i in messages%}
+    {{i.text}}
+    {{i.like}}
+    <a href="/like/{{i.id}}">Upvote</a>
+    <a href="/unlike/{{i.id}}">Downvote</a>
+    {% endfor %}
+
+</ul>
+{% endblock %}

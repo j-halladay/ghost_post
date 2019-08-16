@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<ul>
+    {% for i in messages%}
+    <li><a href="recipies/{{i.id}}">{{ i.title}}</a></li>
+    {{i.like}}
+    <a href="like/{{i.id}}">Upvote</a>
+    <a href="unlike/{{i.id}}">Downvote</a>
+    {% endfor %}
+
+</ul>
+{% endblock %}
